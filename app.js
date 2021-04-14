@@ -16,22 +16,25 @@ let badSide = {
     Wizards: 10
 }
 // REVIEW can we use a dictionary and itterate through the values?
-function mybattle(H_M_E_D_E_W) {
-    let goodArr = H_M_E_D_E_W.split(' ').map(Number)
+function mybattle(good, bad) {
+    let goodArr = good.split(' ').map(Number)
+
 
     let totalHero = 0
     for (let i = 0; i < goodArr.length; i++) {
-        const currentHero = goodArr[i];;
+        const currentHeroCount = goodArr[i];
+
+        totalHero += (currentHeroCount * goodSide[])
         console.log(totalHero);
-        console.log(currentHero);
+
     }
 
 }
 
 
+mybattle("1 2 3 4 5 6", "1 2 3 4 5 6 7")
 
-
-
+//Mine does not work because in order to iterate through a dictionary you must be able to have the key in the argument when you run the function, which is not how this function worked
 
 
 
